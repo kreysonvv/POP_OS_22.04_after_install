@@ -9,6 +9,8 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-bui
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/kinetic/winehq-kinetic.sources
 #client for eve-ng
 sudo add-apt-repository ppa:smartfinn/eve-ng-integration
+#repo for web-apps
+sudo add-apt-repository ppa:webapps/preview
 #repo for syncthing
 sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
@@ -35,7 +37,7 @@ sudo apt install wireguard -y
 sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 #install soft from repos
-sudo apt install libu2f-udev curl aptitude virtualbox-7.0 gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
+sudo apt install libu2f-udev curl aptitude unity-webapps-preview timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
 sudo apt install winetricks sublime-text syncthing librewolf darktable filezilla docker openjdk-17-jre-headless default-jre steam-installer python2 python3-pip python3-venv -y
 #install kali repos
 sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list" -y
