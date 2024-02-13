@@ -41,8 +41,10 @@ sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 #install soft from repos
 sudo apt install libu2f-udev curl aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
-sudo apt install winetricks sublime-text syncthing librewolf darktable filezilla docker openjdk-17-jre-headless default-jre steam-installer python2 python3-pip python3-venv -y
+sudo apt install git winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
 #install kali repos
 sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list" -y
 wget 'https://archive.kali.org/archive-key.asc'
