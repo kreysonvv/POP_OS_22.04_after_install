@@ -54,7 +54,7 @@ wine winecfg
 sudo apt install libu2f-udev curl aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
 sudo apt install git winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
 #install kali repos
 sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list" -y
@@ -65,7 +65,7 @@ sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: relea
 #update
 sudo apt update
 #install kali soft
-sudo aptitude install -t kali-rolling wpscan dirsearch gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd -y
+sudo aptitude install -t kali-rolling wpscan dirsearch metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd -y
 #install zsh и oh-my-zsh
 sudo apt install zsh -y
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
