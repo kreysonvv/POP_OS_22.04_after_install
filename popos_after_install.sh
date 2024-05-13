@@ -86,6 +86,8 @@ zsh
 source ~/.zshrc
 #Включаем wayland
 sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
+#Устанавливаем новую версию Gnome
+sudo apt install gnome-session
 #Скачиваем и устанавливаем Telegram
 mkdir ~/Apps
 cd ~/Apps
