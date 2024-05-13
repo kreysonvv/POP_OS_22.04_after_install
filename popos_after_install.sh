@@ -67,6 +67,20 @@ sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: relea
 sudo apt update
 #install kali soft
 sudo aptitude install -t kali-rolling wpscan dirsearch metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd -y
+#Скачиваем и устанавливаем Telegram
+mkdir ~/Apps
+cd ~/Apps
+wget https://telegram.org/dl/desktop/linux
+tar -xf linux
+rm linux
+cd ~/
+#Включаем wayland
+sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
+#Скачиваем и устанавливаем obsidian
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/obsidian_1.5.12_amd64.deb
+sudo apt install ./obsidian_1.5.12_amd64.deb
+#Устанавливаем новую версию Gnome
+sudo apt install gnome-session
 #install zsh и oh-my-zsh
 sudo apt install zsh -y
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -84,13 +98,3 @@ sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jonathan"/' ~/.zshrc
 zsh
 source ~/.zshrc
-#Включаем wayland
-sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
-#Устанавливаем новую версию Gnome
-sudo apt install gnome-session
-#Скачиваем и устанавливаем Telegram
-mkdir ~/Apps
-cd ~/Apps
-wget https://telegram.org/dl/desktop/linux
-tar -xf linux
-./Telegram/Telegram
