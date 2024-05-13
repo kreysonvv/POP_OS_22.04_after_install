@@ -86,3 +86,9 @@ zsh
 source ~/.zshrc
 #Включаем wayland
 sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
+#Скачиваем и устанавливаем Telegram
+mkdir ~/Apps
+cd ~/Apps
+wget https://telegram.org/dl/desktop/linux
+tar -xf linux
+./Telegram/Telegram
