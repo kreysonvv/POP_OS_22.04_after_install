@@ -1,8 +1,8 @@
 #! /bin/bash
-#add universal repo
-sudo add-apt-repository universe
 sudo apt update
 sudo apt full-upgrade -y
+#add universal repo
+sudo add-apt-repository universe
 #repo for wine
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -15,7 +15,6 @@ sudo add-apt-repository ppa:smartfinn/eve-ng-integration
 #repo for yubiko
 sudo add-apt-repository ppa:yubico/stable
 # Add Docker's official GPG key:
-sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
@@ -29,7 +28,7 @@ echo \
 sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
 #repo for librewolf
-sudo apt install -y wget gnupg lsb-release apt-transport-https ca-certificates
+sudo apt install -y wget gnupg lsb-release apt-transport-https
 distro=$(if echo " una vanessa focal jammy bullseye vera uma" | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
 sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
@@ -74,11 +73,12 @@ chsh
 #Ввести /bin/zsh
 #Настройка подсветки
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-mv zsh-syntax-highlighting ~/.oh-my-zsh/plugins
-#Затем вставьте следующую строку в конец файла ~/.zshrc: source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+mv zsh-syntax-highlighting ~/.oh-my-zsh/plugins 
+echo "source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 #Настроика автозаполнения на Zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions
 mv zsh-autosuggestions ~/.oh-my-zsh/custom/plugins
-#Затем добавьте плагин в список плагинов в файле ~/.zshrc: plugins=(git docker gcloud terraform vagrant zsh-autosuggestions)
-# zsh
-# source ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc 
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jonathan"/' ~/.zshrc
+zsh
+source ~/.zshrc
