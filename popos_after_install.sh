@@ -11,9 +11,11 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 #client for eve-ng
-sudo add-apt-repository ppa:smartfinn/eve-ng-integration
+sudo add-apt-repository ppa:smartfinn/eve-ng-integration <<EOF
+EOF
 #repo for yubiko
-sudo add-apt-repository ppa:yubico/stable
+sudo add-apt-repository ppa:yubico/stable <<EOF
+EOF
 # Add Docker's official GPG key:
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -82,3 +84,5 @@ sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jonathan"/' ~/.zshrc
 zsh
 source ~/.zshrc
+#Включаем wayland
+sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
