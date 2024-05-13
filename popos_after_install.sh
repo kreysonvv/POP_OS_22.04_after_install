@@ -79,6 +79,7 @@ sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
 #Скачиваем и устанавливаем obsidian
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/obsidian_1.5.12_amd64.deb
 sudo apt install ./obsidian_1.5.12_amd64.deb
+rm ./obsidian_1.5.12_amd64.deb
 #Устанавливаем новую версию Gnome
 sudo apt install gnome-session
 #install zsh и oh-my-zsh
