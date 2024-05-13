@@ -78,12 +78,20 @@ cd ~/
 sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
 #Скачиваем и устанавливаем obsidian
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/obsidian_1.5.12_amd64.deb
-sudo apt install ./obsidian_1.5.12_amd64.deb
+sudo apt install -y ./obsidian_1.5.12_amd64.deb
 rm ./obsidian_1.5.12_amd64.deb
 #Устанавливаем новую версию Gnome
-sudo apt install gnome-session
+sudo apt install gnome-session -y
+#Скачиваем и устанавливаем VirtualBox
+wget https://download.virtualbox.org/virtualbox/7.0.18/virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
+sudo apt install -y ./virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
+rm ./virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
+sudo gpasswd -a $USER vboxusers
+wget https://download.virtualbox.org/virtualbox/7.0.18/Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack -y
+rm Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
 #install zsh и oh-my-zsh
-sudo apt install zsh -y
+sudo apt install zsh -y 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 #Изменить шелл по-умолчанию
 chsh
