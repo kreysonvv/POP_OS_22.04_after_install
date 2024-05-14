@@ -74,6 +74,10 @@ wget https://telegram.org/dl/desktop/linux
 tar -xf linux
 rm linux 
 cd ~/
+#Устанавливаем webapp-manager
+wget http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.3.4_all.deb
+sudo apt install ./webapp-manager_1.3.4_all.deb -y
+rm webapp-manager_1.3.4_all.deb
 #Устанавливаем Bottles и Portproton
 flatpak install flathub com.usebottles.bottles -y
 flatpak install flathub portproton -y
