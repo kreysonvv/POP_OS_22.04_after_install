@@ -2,7 +2,7 @@
 sudo apt update
 sudo apt full-upgrade -y
 #add universal repo
-sudo add-apt-repository universe
+sudo add-apt-repository universe -y
 #repo for wine
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
