@@ -16,6 +16,8 @@ EOF
 #repo for yubiko
 sudo add-apt-repository ppa:yubico/stable <<EOF
 EOF
+#repo for HP
+sudo add-apt-repository ppa:kelebek333/hplip -y
 # Add Docker's official GPG key:
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -53,7 +55,7 @@ sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 #install soft from repos
 sudo apt install libu2f-udev curl winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
-sudo apt install htop qbittorrent thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
+sudo apt install htop qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
 sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
