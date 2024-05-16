@@ -108,7 +108,7 @@ mkdir -p ~/src
 cd ~/src
 git clone https://github.com/morrownr/8812au-20210820.git
 cd ~/src/8812au-20210820
-sudo ./install-driver.sh
+echo "n" | sudo ./install-driver.sh
 cd ~
 rm -rf ./src
 # Устанавливаем zsh и oh-my-zsh
