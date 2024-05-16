@@ -56,7 +56,7 @@ sudo apt install libu2f-udev curl winbind playonlinux aptitude timeshift solaar 
 sudo apt install htop qbittorrent rpi-imager hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
 sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-buildx-plugin docker-compose-plugin -y
-sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
+sudo apt install libgstreamer1.0-0 mkvtoolnix mkvtoolnix-gui gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
 # Создать конфиг для wg
 sudo touch /etc/wireguard/wg0.conf
 # Запуск - sudo wg-quick up wg0
