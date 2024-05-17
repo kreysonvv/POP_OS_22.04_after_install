@@ -53,7 +53,7 @@ sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev iw curl wireguard winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
-sudo apt install htop golang-go qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
+sudo apt install htop golang-go dirsearch wfuzz qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install libu2f-udev curl winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
 sudo apt install htop qbittorrent rpi-imager hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
@@ -71,7 +71,7 @@ sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: relea
 # Обновляем
 sudo apt update
 # Устанавливаем софт из репы kali
-sudo aptitude install -t kali-rolling wpscan yersinia scapy metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd wpscan ffuf dirsearch wfuzz -y
+sudo aptitude install -t kali-rolling wpscan yersinia scapy metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd wpscan ffuf -y
 # Скачиваем и устанавливаем Telegram
 mkdir ~/Apps
 cd ~/Apps
