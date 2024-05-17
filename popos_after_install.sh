@@ -51,7 +51,7 @@ sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev iw curl wireguard winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
-sudo apt install htop qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
+sudo apt install htop golang-go qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install libu2f-udev curl winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
 sudo apt install htop qbittorrent rpi-imager hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
@@ -81,6 +81,9 @@ cd ~/
 wget http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.3.4_all.deb
 sudo apt install ./webapp-manager_1.3.4_all.deb -y
 rm webapp-manager_1.3.4_all.deb
+# Устанавливаем Shodan и Goshod
+pip3 install -U --user shodan
+go install github.com/jayateertha043/goshod@latest
 # Устанавливаем Bottles и Portproton
 flatpak install flathub com.usebottles.bottles -y
 flatpak install flathub portproton -y
