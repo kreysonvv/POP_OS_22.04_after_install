@@ -69,7 +69,7 @@ sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: relea
 # Обновляем
 sudo apt update
 # Устанавливаем софт из репы kali
-sudo aptitude install -t kali-rolling wpscan bettercap dirsearch metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd -y
+sudo aptitude install -t kali-rolling wpscan yersinia scapy bettercap dirsearch metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd -y
 # Скачиваем и устанавливаем Telegram
 mkdir ~/Apps
 cd ~/Apps
