@@ -149,6 +149,14 @@ wget https://github.com/magnus-root/nvim_config/archive/refs/heads/master.zip
 unzip ./master.zip
 mv nvim_config-master ~/.config/nvim
 rm ./master.zip
+# Устанавливаем менеджер плагинов для tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp
+# Скачиваем и устанвливаем конфиг для tmux
+wget https://github.com/magnus-root/tmux_config/archive/refs/heads/master.zip
+unzip ./master.zip
+mv tmux_config-master/tmux.conf ~/.tmux.conf
+rm -r tmux_config-master
+rm ./master.zip
 # Запускаем zsh
 zsh
 source ~/.zshrc
