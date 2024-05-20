@@ -43,6 +43,10 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
+# Репа и установка neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
 # Обновление из новых реп
 sudo apt update
 sudo apt dist-upgrade -y
@@ -54,7 +58,7 @@ wine winecfg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev iw curl wireguard winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
 sudo apt install htop golang-go dirsearch wfuzz qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
-sudo apt install libu2f-udev curl winbind playonlinux discord tmux neovim aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
+sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
 sudo apt install htop qbittorrent rpi-imager hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
 sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-buildx-plugin docker-compose-plugin -y
@@ -133,5 +137,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 mv zsh-autosuggestions ~/.oh-my-zsh/custom/plugins
 sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc 
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jonathan"/' ~/.zshrc
+# Добавляем neovim
+export 'PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
 zsh
 source ~/.zshrc
