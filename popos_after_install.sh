@@ -144,5 +144,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsM
 unzip JetBrainsMono.zip
 sudo mv JetBrainsMono /usr/local/share/fonts
 rm JetBrainsMono.zip
+# Скачиваем и устанавливаем конфиг для nvim
+wget https://github.com/magnus-root/nvim_config/archive/refs/heads/master.zip
+unzip ./master.zip
+mv nvim_config-master ~/.config/nvim
+rm ./master.zip
+# Запускаем zsh
 zsh
 source ~/.zshrc
