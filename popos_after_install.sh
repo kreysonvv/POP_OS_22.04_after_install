@@ -139,5 +139,10 @@ sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jonathan"/' ~/.zshrc
 # Добавляем neovim
 export 'PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
+# Скачиваем и устанавливаем в систему шрифт для neovim, потом его нужно выбрать в терминале
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+unzip JetBrainsMono.zip
+sudo mv JetBrainsMono /usr/local/share/fonts
+rm JetBrainsMono.zip
 zsh
 source ~/.zshrc
