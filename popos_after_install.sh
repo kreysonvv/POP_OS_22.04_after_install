@@ -154,7 +154,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp
 # Скачиваем и устанвливаем конфиг для tmux
 wget https://github.com/magnus-root/tmux_config/archive/refs/heads/master.zip
 unzip ./master.zip
-mv tmux_config-master/tmux.conf ~/.tmux.conf
+mkdir ~/.config/tmux
+mv tmux_config-master/tmux.conf ~/.config/tmux/tmux.conf
 rm -r tmux_config-master
 rm ./master.zip
 # Запускаем zsh
