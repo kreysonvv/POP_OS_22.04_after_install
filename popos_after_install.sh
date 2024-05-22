@@ -57,7 +57,7 @@ sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev iw curl wireguard zeal gimp -y
-sudo apt install winbind playonlinux aptitude timeshift solaar -y
+sudo apt install winbind playonlinux aptitude timeshift solaar swaks -y
 sudo apt install gnome-tweaks gnome-shell-extension-manager code -y
 sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc vlc audacity obs-studio eve-ng-integration -y
