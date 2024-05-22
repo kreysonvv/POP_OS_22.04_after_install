@@ -56,13 +56,23 @@ sudo dpkg-reconfigure locales
 sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 # Устанавливаем софт
-sudo apt install libu2f-udev libelf-dev iw curl wireguard winbind playonlinux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
-sudo apt install htop golang-go dirsearch patator wfuzz qbittorrent hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
-sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude timeshift solaar gnome-tweaks gnome-shell-extension-manager ubuntu-restricted-extras nmap wireshark putty gdebi keepassxc vlc audacity gimp obs-studio zeal eve-ng-integration -y
-sudo apt install htop qbittorrent rpi-imager hplip hplip-gui thunderbird code git audacious winetricks sublime-text syncthing librewolf darktable filezilla openjdk-17-jre-headless default-jre openjdk-17-jre steam-installer python3-pip python3-venv -y
-sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop bloodhound -y
+sudo apt install libu2f-udev libelf-dev iw curl wireguard zeal gimp -y
+sudo apt install winbind playonlinux aptitude timeshift solaar -y
+sudo apt install gnome-tweaks gnome-shell-extension-manager code -y
+sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
+sudo apt install gdebi keepassxc vlc audacity obs-studio eve-ng-integration -y
+sudo apt install htop golang-go dirsearch patator wfuzz qbittorrent -y
+sudo apt install hplip hplip-gui thunderbird code git audacious git -y
+sudo apt install winetricks sublime-text syncthing librewolf darktable -y
+sudo apt install filezilla openjdk-17-jre-headless default-jre openjdk-17-jre -y
+sudo apt install steam-installer python3-pip python3-venv putty wireshark -y
+sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude -y
+sudo apt install timeshift solaar ubuntu-restricted-extras nmap bloodhound -y
+sudo apt install rpi-imager hplip hplip-gui thunderbird mkvtoolnix mkvtoolnix-gui -y
+sudo apt install audacious winetricks sublime-text syncthing librewolf -y
+sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
 sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-buildx-plugin docker-compose-plugin -y
-sudo apt install libgstreamer1.0-0 mkvtoolnix mkvtoolnix-gui gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
+sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
 # Создать конфиг для wg
 sudo touch /etc/wireguard/wg0.conf
 # Запуск - sudo wg-quick up wg0
@@ -87,6 +97,10 @@ cd ~/
 wget http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.3.4_all.deb
 sudo apt install ./webapp-manager_1.3.4_all.deb -y
 rm webapp-manager_1.3.4_all.deb
+# Устанавливаем VeraCrypt
+wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Ubuntu-22.04-amd64.deb
+sudo apt install ./veracrypt-1.26.7-Ubuntu-22.04-amd64.deb -y
+rm veracrypt-1.26.7-Ubuntu-22.04-amd64.deb
 # Устанавливаем Shodan и Goshod
 pip3 install -U --user shodan
 go install github.com/jayateertha043/goshod@latest
