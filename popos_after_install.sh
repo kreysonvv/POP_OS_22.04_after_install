@@ -155,13 +155,13 @@ export 'PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
 # Скачиваем и устанавливаем в систему шрифт для neovim, потом его нужно выбрать в терминале
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 unzip JetBrainsMono.zip
-sudo mv JetBrainsMono /usr/local/share/fonts
-rm JetBrainsMono.zip
+rm JetBrainsMono.zip OFL.txt README.md
+sudo mv JetB* /usr/local/share/fonts/
 # Скачиваем и устанавливаем конфиг для nvim
 wget https://github.com/magnus-root/nvim_config/archive/refs/heads/master.zip
 unzip ./master.zip
 mv nvim_config-master/* ~/.config/nvim
-rm ./master.zip
+rm ./master.zip nvim_config-master
 # Устанавливаем менеджер плагинов для tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp
 # Скачиваем и устанвливаем конфиг для tmux
