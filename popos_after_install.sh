@@ -58,7 +58,7 @@ wine winecfg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev libuv1=1.43.0-1ubuntu0.1 libnode72 iw curl wireguard zeal gimp -y
 sudo apt install winbind playonlinux aptitude timeshift solaar npm swaks -y
-sudo apt install gnome-tweaks gnome-shell-extension-manager code -y
+sudo apt install gnome-tweaks gnome-shell-extension-manager mpv code -y
 sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc vlc audacity obs-studio eve-ng-integration -y
 sudo apt install htop golang-go dirsearch patator wfuzz qbittorrent -y
@@ -85,6 +85,17 @@ sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: relea
 sudo apt update
 # Устанавливаем софт из репы kali
 sudo aptitude install -t kali-rolling wpscan python3-impacket yersinia scapy metasploit-framework gobuster airgeddon bettercap ettercap-graphical hostapd-wpe bully pixiewps dhcpd asleap hashcat hostapd tshark mdk4 hcxdumptool reaver john crunch beef lighttpd wpscan ffuf -y
+# Конфиг для mpv плеера (для просмотра 4K HDR на обычном монике)
+mkdir ~/.config/mpv
+cat > ~/.config/mpv/mpv.conf <<EOF
+vo=gpu
+hwdec=auto
+target-peak=400
+target-contrast=1000
+target-trc=srgb
+target-prim=bt.709
+tone-mapping=mobius
+EOF
 # Скачиваем и устанавливаем Telegram
 mkdir ~/Apps
 cd ~/Apps
@@ -171,6 +182,5 @@ mkdir ~/.config/tmux
 mv tmux_config-master/tmux.conf ~/.config/tmux/tmux.conf
 rm -r tmux_config-master
 rm ./master.zip
-# Запускаем zsh
-zsh
-source ~/.zshrc
+# Готово
+echo "Для применения изменений перезапустите ПК"
