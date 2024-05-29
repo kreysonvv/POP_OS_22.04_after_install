@@ -114,9 +114,10 @@ rm veracrypt-1.26.7-Ubuntu-22.04-amd64.deb
 # Устанавливаем Shodan и Goshod
 pip3 install -U --user shodan
 go install github.com/jayateertha043/goshod@latest
-# Устанавливаем Bottles и Portproton
+# Устанавливаем Bottles, Portproton и Element
 flatpak install flathub com.usebottles.bottles -y
 flatpak install flathub portproton -y
+flatpak install flathub im.riot.Riot -y
 # Скачиваем и устанавливаем Steam
 wget https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
 sudo apt install ./steam.deb -y
