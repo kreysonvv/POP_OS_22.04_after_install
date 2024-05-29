@@ -61,7 +61,7 @@ sudo apt install winbind playonlinux aptitude timeshift solaar npm swaks -y
 sudo apt install gnome-tweaks gnome-shell-extension-manager mpv code -y
 sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc vlc audacity obs-studio eve-ng-integration -y
-sudo apt install htop golang-go dirsearch patator wfuzz qbittorrent -y
+sudo apt install htop golang-go dirsearch patator wfuzz qbittorrent dconf-editor -y
 sudo apt install hplip hplip-gui thunderbird code git audacious git -y
 sudo apt install filezilla openjdk-17-jre-headless default-jre openjdk-17-jre -y
 sudo apt install steam-installer python3-pip python3-venv putty wireshark -y
