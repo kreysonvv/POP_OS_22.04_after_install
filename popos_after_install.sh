@@ -124,6 +124,8 @@ sudo apt install ./steam.deb -y
 rm ./steam.deb
 # Включаем wayland
 sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
+# Включаем прозрачность дока
+dconf write  /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.3
 # Скачиваем и устанавливаем obsidian
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/obsidian_1.5.12_amd64.deb
 sudo apt install -y ./obsidian_1.5.12_amd64.deb
