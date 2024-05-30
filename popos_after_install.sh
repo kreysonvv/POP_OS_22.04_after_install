@@ -139,6 +139,9 @@ rm Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
 # Ещё раз обновляем, чтобы убрать ошибки установки, если они вдруг были
 sudo apt update
 sudo apt full-upgrade -y
+# Прокси для Docker
+mkdir -p  ~/.config/docker
+echo '{ "registry-mirrors" : [ "https:\/\/mirror.gcr.io" ] }'> ~/.config/docker/daemon.json 
 # Устанавливаем драйвера для RTL8812au
 mkdir -p ~/src
 cd ~/src
