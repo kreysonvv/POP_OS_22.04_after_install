@@ -13,6 +13,9 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 # Репа для eve-ng
 sudo add-apt-repository ppa:smartfinn/eve-ng-integration <<EOF
 EOF
+# Репа для flacon
+sudo add-apt-repository ppa:flacon <<EOF
+EOF
 # Репа для yubiko
 sudo add-apt-repository ppa:yubico/stable <<EOF
 EOF
@@ -68,7 +71,7 @@ sudo apt install steam-installer python3-pip python3-venv putty wireshark -y
 sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude -y
 sudo apt install ubuntu-restricted-extras nmap bloodhound -y
 sudo apt install rpi-imager mkvtoolnix mkvtoolnix-gui handbrake -y
-sudo apt install audacious fbreader darktable winetricks sublime-text syncthing librewolf -y
+sudo apt install audacious fbreader flacon darktable winetricks sublime-text syncthing librewolf -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
 sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
