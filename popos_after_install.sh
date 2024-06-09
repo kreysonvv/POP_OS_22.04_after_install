@@ -99,12 +99,15 @@ target-trc=srgb
 target-prim=bt.709
 tone-mapping=mobius
 EOF
-# Скачиваем и устанавливаем Telegram
+# Скачиваем и устанавливаем Telegram и Carbonyl
 mkdir ~/Apps
 cd ~/Apps
 wget https://telegram.org/dl/desktop/linux
 tar -xf linux
-rm linux 
+rm linux
+wget wget https://github.com/fathyb/carbonyl/releases/download/v0.0.3/carbonyl.linux-amd64.zip
+unzip carbonyl.linux-amd64.zip
+rm carbonyl.linux-amd64.zip
 cd ~/
 # Устанавливаем webapp-manager
 wget http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.3.4_all.deb
