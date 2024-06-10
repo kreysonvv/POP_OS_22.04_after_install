@@ -167,11 +167,13 @@ chsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 mv zsh-syntax-highlighting ~/.oh-my-zsh/plugins 
 echo "source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-# Настроика автозаполнения на Zsh
+# Настроика автозаполнения и темы в Zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions
 mv zsh-autosuggestions ~/.oh-my-zsh/custom/plugins
-sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc 
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jonathan"/' ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc
+git clone https://github.com/ChesterYue/ohmyzsh-theme-passion
+cp ./ohmyzsh-theme-passion/passion.zsh-theme ~/.oh-my-zsh/themes/passion.zsh-theme
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="passion"/' ~/.zshrc
 # Добавляем neovim
 export 'PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
 # Скачиваем и устанавливаем в систему шрифт для neovim, потом его нужно выбрать в терминале
