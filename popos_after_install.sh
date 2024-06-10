@@ -174,6 +174,7 @@ sed -i 's/plugins=(git)/plugins=(git docker zsh-autosuggestions)/' ~/.zshrc
 git clone https://github.com/ChesterYue/ohmyzsh-theme-passion
 cp ./ohmyzsh-theme-passion/passion.zsh-theme ~/.oh-my-zsh/themes/passion.zsh-theme
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="passion"/' ~/.zshrc
+rm -rf ./ohmyzsh-theme-passion
 # Добавляем neovim
 export 'PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
 # Скачиваем и устанавливаем в систему шрифт для neovim, потом его нужно выбрать в терминале
