@@ -65,7 +65,7 @@ sudo apt install gnome-tweaks gnome-shell-extension-manager mpv kdenlive -y
 sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc audacity obs-studio eve-ng-integration -y
 sudo apt install htop golang-go dirsearch patator wfuzz qbittorrent dconf-editor -y
-sudo apt install hplip hplip-gui thunderbird code git -y
+sudo apt install hplip hplip-gui thunderbird code sshpass git -y
 sudo apt install filezilla openjdk-17-jre-headless default-jre openjdk-17-jre -y
 sudo apt install steam-installer python3-pip python3-venv putty wireshark -y
 sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude -y
