@@ -69,7 +69,7 @@ sudo apt install hplip hplip-gui thunderbird code sshpass git -y
 sudo apt install filezilla openjdk-17-jre-headless default-jre openjdk-17-jre -y
 sudo apt install steam-installer python3-pip python3-venv putty wireshark -y
 sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude -y
-sudo apt install ubuntu-restricted-extras nmap bloodhound -y
+sudo apt install ubuntu-restricted-extras nmap resolvconf bloodhound -y
 sudo apt install rpi-imager mkvtoolnix mkvtoolnix-gui handbrake cmus -y
 sudo apt install audacious fbreader flacon darktable winetricks sublime-text syncthing librewolf -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
