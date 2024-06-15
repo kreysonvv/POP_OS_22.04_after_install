@@ -60,16 +60,16 @@ sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev libuv1=1.43.0-1ubuntu0.1 libnode72 iw curl wireguard zeal gimp -y
-sudo apt install winbind playonlinux aptitude timeshift solaar npm swaks -y
+sudo apt install winbind aptitude timeshift solaar npm swaks -y
 sudo apt install gnome-tweaks gnome-shell-extension-manager mpv kdenlive -y
 sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc audacity obs-studio eve-ng-integration -y
 sudo apt install htop golang-go dirsearch patator remmina wfuzz qbittorrent dconf-editor -y
 sudo apt install hplip hplip-gui thunderbird code sshpass git -y
 sudo apt install filezilla openjdk-17-jre-headless default-jre openjdk-17-jre -y
-sudo apt install steam-installer python3-pip python3-venv putty wireshark -y
-sudo apt install libu2f-udev curl winbind playonlinux discord tmux aptitude -y
-sudo apt install ubuntu-restricted-extras nmap resolvconf bloodhound -y
+sudo apt install steam-installer python3-pip python3-venv -y
+sudo apt install libu2f-udev curl winbind playonlinux discord tmux -y
+sudo apt install ubuntu-restricted-extras resolvconf bloodhound -y
 sudo apt install rpi-imager mkvtoolnix mkvtoolnix-gui handbrake cmus -y
 sudo apt install audacious fbreader flacon darktable winetricks sublime-text syncthing librewolf -y
 sudo apt install yubikey-manager yubikey-personalization-gui libpam-yubico libpam-u2f yubikey-manager-qt yubioath-desktop -y
