@@ -59,16 +59,16 @@ sudo dpkg-reconfigure locales
 sudo apt install --install-recommends winehq-stable -y
 wine winecfg
 # Устанавливаем софт
-sudo apt install libu2f-udev libelf-dev libuv1=1.43.0-1ubuntu0.1 libnode72 iw curl wireguard zeal gimp -y
-sudo apt install winbind aptitude timeshift solaar npm swaks -y
+sudo apt install libu2f-udev libelf-dev libuv1=1.43.0-1ubuntu0.1 libnode72 iw wireguard zeal gimp -y
+sudo apt install aptitude timeshift solaar npm swaks -y
 sudo apt install gnome-tweaks gnome-shell-extension-manager mpv kdenlive -y
-sudo apt install ubuntu-restricted-extras nmap wireshark putty gparted -y
+sudo apt install nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc audacity obs-studio eve-ng-integration -y
 sudo apt install htop golang-go dirsearch patator remmina wfuzz qbittorrent dconf-editor -y
 sudo apt install hplip hplip-gui thunderbird code sshpass git -y
 sudo apt install filezilla openjdk-17-jre-headless default-jre openjdk-17-jre -y
 sudo apt install steam-installer python3-pip python3-venv -y
-sudo apt install libu2f-udev curl winbind playonlinux discord tmux -y
+sudo apt install curl winbind playonlinux discord tmux -y
 sudo apt install ubuntu-restricted-extras resolvconf bloodhound -y
 sudo apt install rpi-imager mkvtoolnix mkvtoolnix-gui handbrake cmus -y
 sudo apt install audacious fbreader flacon darktable winetricks sublime-text syncthing librewolf -y
@@ -77,9 +77,6 @@ sudo apt install docker-ce docker-ce-cli docker-compose containerd.io docker-bui
 sudo apt install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav -y
 # Удаляем лишний софт
 sudo apt remove geary -y
-# Создать конфиг для wg
-sudo touch /etc/wireguard/wg0.conf
-# Запуск - sudo wg-quick up wg0
 # Устанавливаем репу kali
 sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list" -y
 wget 'https://archive.kali.org/archive-key.asc'
@@ -161,6 +158,7 @@ rm -rf ./src
 sudo apt install zsh -y 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 # Изменить шелл по-умолчанию
+echo "!!! При запросе далее введите /bin/zsh !!!"
 chsh
 # Ввести /bin/zsh
 # Настройка подсветки
