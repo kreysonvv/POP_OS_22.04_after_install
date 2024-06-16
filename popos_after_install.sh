@@ -146,14 +146,6 @@ rm Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
 # Ещё раз обновляем, чтобы убрать ошибки установки, если они вдруг были
 sudo apt update
 sudo apt full-upgrade -y
-# Устанавливаем драйвера для RTL8812au
-mkdir -p ~/src
-cd ~/src
-git clone https://github.com/morrownr/8812au-20210820.git
-cd ~/src/8812au-20210820
-echo "n" | sudo ./install-driver.sh
-cd ~
-rm -rf ./src
 # Устанавливаем zsh и oh-my-zsh
 sudo apt install zsh -y 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -194,5 +186,13 @@ mkdir ~/.config/tmux
 mv tmux_config-master/tmux.conf ~/.config/tmux/tmux.conf
 rm -r tmux_config-master
 rm ./master.zip
-# Готово
-echo "Для применения изменений перезапустите ПК"
+# Устанавливаем драйвера для RTL8812au
+mkdir -p ~/src
+cd ~/src
+git clone https://github.com/morrownr/8812au-20210820.git
+cd ~/src/8812au-20210820
+echo "n" | sudo ./install-driver.sh
+cd ~
+rm -rf ./src
+# Перезагрузка
+shutdown -r now
