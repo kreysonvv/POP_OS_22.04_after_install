@@ -135,6 +135,10 @@ dconf write  /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.3
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.12/obsidian_1.5.12_amd64.deb
 sudo apt install -y ./obsidian_1.5.12_amd64.deb
 rm ./obsidian_1.5.12_amd64.deb
+# Скачиваем и устанавливаем Rust и софт
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+export PATH=/home/$USER/.cargo/bin:$PATH
+cargo install bat ripgrep -y
 # Скачиваем и устанавливаем VirtualBox
 wget https://download.virtualbox.org/virtualbox/7.0.18/virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
 sudo apt install -y ./virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
