@@ -145,6 +145,7 @@ rm ./obsidian_1.5.12_amd64.deb
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 export PATH=/home/$USER/.cargo/bin:$PATH
 cargo install bat ripgrep -y
+cargo install --locked yazi-fm yazi-cli
 # Скачиваем и устанавливаем VirtualBox
 wget https://download.virtualbox.org/virtualbox/7.0.18/virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
 sudo apt install -y ./virtualbox-7.0_7.0.18-162988\~Ubuntu\~jammy_amd64.deb
