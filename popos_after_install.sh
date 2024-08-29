@@ -58,9 +58,15 @@ sudo dpkg-reconfigure locales
 # Устанавливаем wine
 sudo apt install --install-recommends winehq-stable -y
 wine winecfg
+# Репозиторий для Warp
+sudo apt-get install wget gpg
+wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+rm warpdotdev.gpg
 # Устанавливаем софт
 sudo apt install libu2f-udev libelf-dev libuv1=1.43.0-1ubuntu0.1 libnode72 iw wireguard zeal gimp -y
-sudo apt install aptitude timeshift solaar npm swaks -y
+sudo apt install aptitude timeshift solaar npm swaks warp-terminal -y
 sudo apt install gnome-tweaks gnome-shell-extension-manager mpv kdenlive -y
 sudo apt install nmap wireshark putty gparted -y
 sudo apt install gdebi keepassxc audacity obs-studio eve-ng-integration -y
